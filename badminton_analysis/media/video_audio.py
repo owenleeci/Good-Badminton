@@ -19,6 +19,10 @@ def encode_vscode_compatible_mp4(input_video_path, output_path, audio_source_pat
         "ffmpeg",
         "-y",
         "-i",
+        "-vcodec",
+        "libx264",
+        "-pix_fmt",
+        "yuv420p",
         input_video_path,
     ]
     if audio_source_path:
@@ -49,8 +53,8 @@ def encode_vscode_compatible_mp4(input_video_path, output_path, audio_source_pat
             "aac",
             "-b:a",
             "160k",
-            "-movflags",
-            "+faststart",
+#            "-movflags",
+#            "+faststart",
             final_output_path,
         ]
     )

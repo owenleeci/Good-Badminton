@@ -3,6 +3,7 @@ import os
 
 from badminton_analysis.system import BadmintonAnalysisSystem, load_runtime_dependencies
 
+# Start testing from 2026/10/27
 
 
 def main():
